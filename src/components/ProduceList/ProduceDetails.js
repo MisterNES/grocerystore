@@ -1,16 +1,14 @@
 import { useDispatch } from "react-redux";
-import { addProduce } from "../../store/cart"
+import { addToCart } from "../../store/cart"
 
 function ProduceDetails({ produce }) {
   const cartItem = {};
-
+  //use useDispatch to run action.
   const dispatch = useDispatch();
 
-
-  const handle = (e) => {
-    e.preventDefault();
-    dispatch(addProduce(produce.id));
-
+  const handle = () => {
+    // e.preventDefault();
+    dispatch(addToCart(produce.id));
   }
 
   return (

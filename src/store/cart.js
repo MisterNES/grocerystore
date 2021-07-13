@@ -2,7 +2,7 @@ import produceData from '../mockData/produce.json'
 
 const ADD = 'cart/ADD';
 
-export const addProduce = (produceId) =>{
+export const addToCart = (produceId) =>{
     return {
         type: ADD,
         produceId
