@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import configureStore from "./store";
 import { populateProduce } from './store/produce';
 import { addToCart } from "./store/cart";
+import { removeOne} from './store/cart'
 import "./index.css";
 import App from "./App";
 
@@ -14,6 +15,8 @@ if (process.env.NODE_ENV !== "production") {
   window.store = store;
   window.populateProduce = populateProduce;
   window.addToCart = addToCart;
+  window.removeOne = removeOne;
+
 }
 
 store.dispatch(populateProduce());
